@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Test affected code
-        run: yarn test
+      - name: Test
+        run: yarn jest --ci --silent --bail --runInBand
         env:
           CI: true
