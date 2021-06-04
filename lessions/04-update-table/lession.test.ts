@@ -12,14 +12,14 @@ describe("Update users from Users table", () => {
   });
 
   it("Should update the column user_handle from all users using the uuid_generate_v4() function", async () => {
-    const QUERY = `update Users set user_handle = uuid_generate_v4();`;
+    const QUERY = `...`;
 
     const result = await q(QUERY);
     expect(result.rowCount).toBe(2);
   });
 
   it("Should update the column user_handle only of the Tyler Clark user", async () => {
-    const QUERY = `update Users set user_handle = uuid_generate_v4() where first_name = 'tyler' and last_name = 'clark';`;
+    const QUERY = `...`;
 
     const result = await q(QUERY);
     expect(result.rowCount).toBe(1);

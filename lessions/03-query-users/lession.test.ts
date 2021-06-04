@@ -12,31 +12,28 @@ describe("Query users from Users table", () => {
   });
 
   it("Should query all columns from Users table", async () => {
-    const QUERY = `select * from Users;`;
+    const QUERY = `...`;
 
     const result = await q(QUERY);
     expect(result.rows).toMatchSnapshot();
   });
 
   it("Should query first_name and last_name columns from Users table", async () => {
-    const QUERY = `
-      SELECT
-        first_name, last_name
-      FROM Users`;
+    const QUERY = `...`;
 
     const result = await q(QUERY);
     expect(result.rows).toMatchSnapshot();
   });
 
   it("Should query first_name and last_name and give them FirstName and LastName alias", async () => {
-    const QUERY = `select first_name as firstname, last_name as lastname from Users;`;
+    const QUERY = `...`;
 
     const result = await q(QUERY);
     expect(result.rows).toMatchSnapshot();
   });
 
   it("Should count all rows in the Users table", async () => {
-    const QUERY = `select count(*) from Users;`;
+    const QUERY = `...`;
 
     const result = await q(QUERY);
     expect(result.rows).toMatchSnapshot();
@@ -46,7 +43,7 @@ describe("Query users from Users table", () => {
     await q(
       `insert into Users (first_name, last_name) values ('tyler', 'clark');`
     );
-    const QUERY = `select distinct(first_name) from Users`;
+    const QUERY = `...`;
 
     const result = await q(QUERY);
     expect(result.rows).toMatchSnapshot();
@@ -56,7 +53,7 @@ describe("Query users from Users table", () => {
     await q(
       `insert into Users (first_name, last_name) values ('tyler', 'clark');`
     );
-    const QUERY = `select count(distinct(last_name)) from Users`;
+    const QUERY = `...`;
 
     const result = await q(QUERY);
     expect(result.rows).toMatchSnapshot();

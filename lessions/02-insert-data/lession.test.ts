@@ -8,15 +8,9 @@ describe("Insert data into Users table", () => {
   it("Should create Tyler Clark user", async () => {
     const QUERY = `
 insert into Users (
-  create_date,
-  user_handle,
-  last_name,
-  first_name
+  ...
 ) values (
-  '2018-06-06',
-  'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11',
-  'clark',
-  'tyler'
+  ...
 );`;
 
     const result = await q(QUERY);
@@ -26,10 +20,7 @@ insert into Users (
   it("Should create Tyler Clark user using short syntax", async () => {
     const QUERY = `
 insert into Users values (
-  '2018-06-06',
-  'a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11',
-  'clark',
-  'tyler'
+  ...
 );`;
     await q(QUERY);
 

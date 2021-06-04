@@ -12,21 +12,21 @@ describe("Update users from Users table", () => {
   });
 
   it("Should delete all rows from Users table", async () => {
-    const QUERY = `delete from Users;`;
+    const QUERY = `...`;
 
     const result = await q(QUERY);
     expect(result.rowCount).toBe(2);
   });
 
   it("Should delete only the Tyler Clark user row", async () => {
-    const QUERY = `delete from Users where first_name = 'tyler' and last_name = 'clark';`;
+    const QUERY = `...`;
 
     const result = await q(QUERY);
     expect(result.rowCount).toBe(1);
   });
 
   it('Should use "truncate" to delete all rows from Users table', async () => {
-    const QUERY = `truncate Users;`;
+    const QUERY = `...`;
 
     await q(QUERY);
     const { rows } = await selectAllUsers();
@@ -34,7 +34,7 @@ describe("Update users from Users table", () => {
   });
 
   it('Should "drop" Users table', async () => {
-    const QUERY = `drop table Users;`;
+    const QUERY = `...`;
 
     await q(QUERY);
 

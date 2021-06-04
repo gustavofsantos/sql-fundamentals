@@ -1,18 +1,10 @@
-import { q, createUsersTable, selectAllUsers } from "../../utils/db";
-import {
-  insertUserDebbieJones,
-  insertUserTylerClark
-} from "../../utils/test-utils";
+import { q } from "../../utils/db";
 
 describe("Update users from Users table", () => {
   it("Should create Users table where the user_handle is a primary key", async () => {
     const QUERY = `
 create table Users (
-  create_date   date,
-  user_handle   uuid,
-  last_name     text,
-  first_name    text,
-  constraint    PK_users primary key (user_handle)
+  ...
 );`;
 
     await q(QUERY);
@@ -22,11 +14,7 @@ create table Users (
     // create the table
     await q(`
 create table Users (
-  create_date   date,
-  user_handle   uuid,
-  last_name     text,
-  first_name    text,
-  constraint    PK_users primary key (user_handle)
+  ...
 );`);
 
     // insert the first user
@@ -45,10 +33,7 @@ create table Users (
   it("Should create Users table where create_date, user_handle and first_name are not nullable columns", async () => {
     const QUERY = `
 create table Users (
-  create_date   date not null,
-  user_handle   uuid not null,
-  last_name     text,
-  first_name    text not null
+  ...
 );`;
 
     await q(QUERY);
@@ -64,10 +49,7 @@ create table Users (
       // create the table
       await q(`
 create table Users (
-  create_date   date not null,
-  user_handle   uuid not null,
-  last_name     text,
-  first_name    text not null
+  ...
 );`);
 
       expect(() =>
@@ -81,10 +63,7 @@ create table Users (
   it("Should create Users table where user_handle is not null and unique", async () => {
     const QUERY = `
 create table Users (
-  create_date   date not null,
-  user_handle   uuid not null unique,
-  last_name     text,
-  first_name    text not null
+  ...
 );`;
 
     await q(QUERY);
@@ -93,10 +72,7 @@ create table Users (
   it("Should create Users table where user_handle is not null and is the table primary key", async () => {
     const QUERY = `
 create table Users (
-  create_date   date not null,
-  user_handle   uuid not null primary key,
-  last_name     text,
-  first_name    text not null
+  ...
 );`;
 
     await q(QUERY);
@@ -105,10 +81,7 @@ create table Users (
   it("Should create Purchases table with column user_handle which is a foreign key and references the user_handle column from Users table", async () => {
     const QUERY = `
 create table Users (
-  create_date   date not null,
-  user_handle   uuid not null primary key,
-  last_name     text,
-  first_name    text not null
+  ...
 );`;
 
     await q(QUERY);
