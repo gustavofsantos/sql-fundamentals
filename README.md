@@ -10,9 +10,13 @@ We will use Node.js, Jest and `pg` to handle all SQL queries. This is an easier 
 
 ### What I need to go through this repository?
 
-You need Node.js, npm or yarn, a running PostgreSQL server and basic knowledge of JavaScript to handle the test files.
+You need Node.js, npm or yarn (I use yarn, so the repository has a yarn.lock file), a running PostgreSQL server and basic knowledge of JavaScript to handle the test files.
 
 ### How this repository is organized?
+
+- [Lessions](./lessions) contains all lessions. Each of them are a test file that contains stuff from the Tyler lession.
+- [Queries](./queries) contains some useful queries that are used during the tests.
+- [Utils](./utils) contains all util files. **You should not use this directory**.
 
 ### How run the tests?
 
@@ -30,9 +34,8 @@ $ npm run test
 $ yarn test
 ```
 
-**By default**, all tests will run in watch mode.
+**By default**, all tests will run in watch mode sequentially.
 
 ### I want the answers!
 
-The `main` branch contains the exercises and all tests are *marked* as **todo**. To view the final version with all challanges done, go checkout
-to the branch `final`.
+The `main` branch contains the exercises and all tests are *marked* as **todo**. To view the final version with all challanges done, go checkout to the branch `final`.
