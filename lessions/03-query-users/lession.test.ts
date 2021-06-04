@@ -4,7 +4,7 @@ import {
   insertUserTylerClark
 } from "../../utils/test-utils";
 
-describe("Insert data into Users table", () => {
+describe("Query users from Users table", () => {
   beforeEach(async () => {
     await createUsersTable();
     await insertUserTylerClark();

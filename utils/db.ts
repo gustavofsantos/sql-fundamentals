@@ -31,3 +31,15 @@ export async function dropUsersTable() {
 
   await q(queryString);
 }
+
+export async function selectAllUsers() {
+  const queryString = fs
+    .readFileSync("./queries/select-all-users.sql", { encoding: "utf-8" })
+    .toString();
+
+  return q(queryString);
+}
+
+export async function configureUuidExtension() {
+  await q(`create extension "uuid-ossp";`);
+}
