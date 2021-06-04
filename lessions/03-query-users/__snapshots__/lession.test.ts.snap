@@ -69,3 +69,73 @@ Array [
   },
 ]
 `;
+
+exports[`Query users from Users table Should count all distinct users by the last_name column 1`] = `
+Array [
+  Object {
+    "count": "2",
+  },
+]
+`;
+
+exports[`Query users from Users table Should count all rows in the Users table 1`] = `
+Array [
+  Object {
+    "count": "2",
+  },
+]
+`;
+
+exports[`Query users from Users table Should get all distinct users by the first_name column 1`] = `
+Array [
+  Object {
+    "first_name": "tyler",
+  },
+  Object {
+    "first_name": "debbie",
+  },
+]
+`;
+
+exports[`Query users from Users table Should query all columns from Users table 1`] = `
+Array [
+  Object {
+    "create_date": 2018-06-06T03:00:00.000Z,
+    "first_name": "tyler",
+    "last_name": "clark",
+    "user_handle": "a0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+  },
+  Object {
+    "create_date": 2018-06-06T03:00:00.000Z,
+    "first_name": "debbie",
+    "last_name": "jones",
+    "user_handle": "a0eebc99-9c0b-42f8-bb6d-6bb9bd380a12",
+  },
+]
+`;
+
+exports[`Query users from Users table Should query first_name and last_name and give them FirstName and LastName alias 1`] = `
+Array [
+  Object {
+    "firstname": "tyler",
+    "lastname": "clark",
+  },
+  Object {
+    "firstname": "debbie",
+    "lastname": "jones",
+  },
+]
+`;
+
+exports[`Query users from Users table Should query first_name and last_name columns from Users table 1`] = `
+Array [
+  Object {
+    "first_name": "tyler",
+    "last_name": "clark",
+  },
+  Object {
+    "first_name": "debbie",
+    "last_name": "jones",
+  },
+]
+`;

@@ -24,9 +24,37 @@ export async function createUsersTable() {
   await q(queryString);
 }
 
+export async function createConstrainedUsersTable() {
+  const queryString = fs
+    .readFileSync("./queries/create-constrained-users-table.sql", {
+      encoding: "utf-8"
+    })
+    .toString();
+
+  await q(queryString);
+}
+
+export async function createConstrainedPurchasesTable() {
+  const queryString = fs
+    .readFileSync("./queries/create-constrained-purchases-table.sql", {
+      encoding: "utf-8"
+    })
+    .toString();
+
+  await q(queryString);
+}
+
 export async function dropUsersTable() {
   const queryString = fs
     .readFileSync("./queries/delete-users-table.sql", { encoding: "utf-8" })
+    .toString();
+
+  await q(queryString);
+}
+
+export async function dropPurchasesTable() {
+  const queryString = fs
+    .readFileSync("./queries/delete-purchases-table.sql", { encoding: "utf-8" })
     .toString();
 
   await q(queryString);
