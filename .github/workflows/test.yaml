@@ -33,4 +33,4 @@ jobs:
       - name: Test
         run: yarn jest --ci --silent --bail --runInBand
         env:
-          CI: true
+          PGHOST: postgres
